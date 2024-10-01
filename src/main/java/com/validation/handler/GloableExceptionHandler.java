@@ -47,9 +47,4 @@ public class GloableExceptionHandler {
 
         return new ResponseEntity<>("Data Voilation Exception "+e.getCause()+e.getMessage(),HttpStatus.CONFLICT);
     }
-  @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> exception(Exception e){
-        return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
-
-  }
 }
